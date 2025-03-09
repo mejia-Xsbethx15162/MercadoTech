@@ -175,7 +175,7 @@ header {
         grid-template-columns: 1fr;
     }
 }
-.congelados{
+.Congelados{
     
     margin: auto;
     margin-top: 4%;
@@ -210,12 +210,12 @@ header {
     color: green;
 }
 @media(max-width:800px){
-    .congelados{
+    .Congelados{
         grid-template-columns: repeat(2,1fr);
     }
 }
 @media(max-width:500px){
-    .congelados{
+    .Congelados{
         grid-template-columns: repeat(1,1fr);
     }
 }
