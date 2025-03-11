@@ -149,32 +149,43 @@ header {
 .inicio {
     width: 100%;
     height: 60vh;
-    border: 2px solid black;
     display: flex;
     justify-content: space-between; 
     align-items: center;
     padding: 20px;
 }
 
-.hijos {
-    background-color: blueviolet;
-    width: 40%;
+.hijos img {
+    margin-top: 10%;
+    margin-left: 15%;
+    width: 80%;
     height: 80%;
+    transition: 0.5s;
 }
+.hijos img:hover {
+    filter: blur(3px);
+    transform: scale(1.1);
+}
+
 
 .hijos1 {
     background-color: beige;
     font-size: 15px;
     letter-spacing: 1px;
-    transform: scaleX(1);
     transition: all 0.3s ease;
-    width: 40%;
-    margin: 10%; 
+    width: 70%;
+    margin: 10%;
+    position: relative;
+    left: 5%;
 }
 
 .hijos1:hover {
-    font-size: 25px;
+    font-size: 20px;
     color: burlywood;
+    transform: all 0.1 ease;
+}
+.hijos1 a:hover{
+    color: blue;
 }
 
 
