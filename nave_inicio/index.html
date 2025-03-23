@@ -3,51 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inicio_nav</title>
-    <link rel="stylesheet" href="/nave_inicio/style.css">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="fondo">
-        <a href="" class="logo"><img src="/img/logo 3.png" alt="Logo"></a>
-        <nav class="navegacion">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="/Acerca/index.html">Acerca de</a></li>
-                <li class="submenu">
-                    <a href="">Productos</a>
-                    <ul class="hijos">
-                        <li><a href="/Productos/aseo_hogar/index.html">Aseo del hogar</a></li>
-                        <li><a href="/Productos/lacteos/index.html">Lácteos</a></li>
-                        <li><a href="/Productos/carnicos/index.html">Cárnicos</a></li>
-                        <li><a href="/Productos/Frutas_verduras/index.html">Frutas y verduras</a></li>
-                        <li><a href="/Productos/Granos_cereales/index.html">Granos y cereales</a></li>
-                        <li><a href="/Productos/bebidas/index.html">Bebidas</a></li>
-                        <li><a href="/Productos/Congelados/index.html">Congelados</a></li>
-                        <li><a href="/Productos/Dulces_chocolates/index.html">Dulces y chocolates</a></li>
-                        <li><a href="/Productos/Despensas/index.html">Despensas</a></li>
-                    </ul>
-                </li>
-                <li><a href="">Descuentos</a></li>
-                <li><a href="">Login</a></li>
-             </ul>
-        </nav>
-     </div>
-</header>
-<body>
-    <div class="inicio">
-        <div class="complemento"></div>
-        <div class="complemento">
-            <h1>En Mercadotech, ponemos todos nuestros productos al alcance de tus manos, 
-                cuidadosamente seleccionados para brindarte lo mejor en calidad y variedad. 
-                Nos hemos diseñado con el compromiso de ofrecerte una experiencia de compra única, 
-                donde la satisfacción y el servicio son nuestra prioridad. Nuestro objetivo es facilitarte el acceso a lo que necesitas, 
-                asegurándonos de que cada producto que encuentres sea justo lo que buscas para mejorar tu día a día.</h1>
+    <header>
+        <div class="fondo">
+            <a href="" class="logo"><img src="/img/logo3.png" alt="Logo"></a>
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="/Acerca/index.html">Acerca de</a></li>
+                    <li class="submenu">
+                        <a href="#">Productos</a>
+                        <ul class="hijos">
+                            <li><a href="/Productos/aseo_hogar/index.html">Aseo del hogar</a></li>
+                            <li><a href="/Productos/lacteos/index.html">Lácteos</a></li>
+                            <li><a href="/Productos/carnicos/index.html">Cárnicos</a></li>
+                            <li><a href="/Productos/Frutas_verduras/index.html">Frutas y verduras</a></li>
+                            <li><a href="/Productos/Granos_cereales/index.html">Granos y cereales</a></li>
+                            <li><a href="/Productos/bebidas/index.html">Bebidas</a></li>
+                            <li><a href="/Productos/Congelados/index.html">Congelados</a></li>
+                            <li><a href="/Productos/Dulces_chocolates/index.html">Dulces y chocolates</a></li>
+                            <li><a href="/Productos/Despensas/index.html">Despensas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Descuentos</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+    
+    <section class="inicio" id="inicio">
+        <div class="texto-inicio">
+            <h1>Bienvenido a Mercadotech</h1>
+            <p>Encuentra los mejores productos con calidad y variedad.</p>
+        </div>
+    </section>
+    
+    <section class="categorias" id="categorias">
+        <h2>Nuestras Categorías</h2>
+        <div class="grid-categorias">
+            <a href="/Productos/aseo_hogar/index.html" class="categoria">
+                <img src="/image.png" alt="Aseo del hogar">
+                <p>Aseo del hogar</p>
+            </a>
+            <a href="/Productos/lacteos/index.html" class="categoria">
+                <img src="/img/lacteos.jpg" alt="Lácteos">
+                <p>Lácteos</p>
+            </a>
+            <a href="/Productos/carnicos/index.html" class="categoria">
+                <img src="/img/carnicos.jpg" alt="Cárnicos">
+                <p>Cárnicos</p>
+            </a>
+            <a href="/Productos/Frutas_verduras/index.html" class="categoria">
+                <img src="/img/frutas_verduras.jpg" alt="Frutas y verduras">
+                <p>Frutas y verduras</p>
+            </a>
+            <a href="/Productos/Granos_cereales/index.html" class="categoria">
+                <img src="/img/granos_cereales.jpg" alt="Granos y cereales">
+                <p>Granos y cereales</p>
+            </a>
+            <a href="/Productos/bebidas/index.html" class="categoria">
+                <img src="/img/bebidas.jpg" alt="Bebidas">
+                <p>Bebidas</p>
+            </a>
+            <a href="/Productos/Congelados/index.html" class="categoria">
+                <img src="/img/congelados.jpg" alt="Congelados">
+                <p>Congelados</p>
+            </a>
+            <a href="/Productos/Dulces_chocolates/index.html" class="categoria">
+                <img src="/img/dulces_chocolates.jpg" alt="Dulces y chocolates">
+                <p>Dulces y chocolates</p>
+            </a>
+            <a href="/Productos/Despensas/index.html" class="categoria">
+                <img src="/img/despensas.jpg" alt="Despensas">
+                <p>Despensas</p>
+            </a>
+        </div>
+    </section>
 </body>
-   
-
 </html>
+
+
+
 
     
