@@ -12,17 +12,19 @@
             <h1>Panel de Administrador</h1>
         </header>
         
+    
         <nav>
             <ul>
                 <li><a href="#inventario">Ver Inventario</a></li>
                 <li><a href="#agregar">Agregar Producto</a></li>
                 <li><a href="#usuarios">Gestionar Usuarios</a></li>
+                <li><a href="/Productos/aseo_hogar/index.html">Ver Productos de Aseo</a></li>
             </ul>
         </nav>
 
-     
+ 
         <main>
-        
+            
             <section id="inventario">
                 <h2>Inventario</h2>
                 <table>
@@ -35,30 +37,16 @@
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                     
-                        <tr>
-                            <td>1</td>
-                            <td>Producto A</td>
-                            <td>50</td>
-                            <td>$20</td>
-                            <td><button>Editar</button><button>Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Producto B</td>
-                            <td>30</td>
-                            <td>$15</td>
-                            <td><button>Editar</button><button>Eliminar</button></td>
-                        </tr>
+                    <tbody id="tabla-inventario">
+                       
                     </tbody>
                 </table>
             </section>
 
-    
+          
             <section id="agregar">
                 <h2>Agregar Producto</h2>
-                <form action="#">
+                <form id="formulario-producto">
                     <label for="nombre">Nombre del Producto:</label>
                     <input type="text" id="nombre" name="nombre" required>
 
@@ -72,7 +60,7 @@
                 </form>
             </section>
 
-
+          
             <section id="usuarios">
                 <h2>Gestionar Usuarios</h2>
                 <table>
@@ -102,5 +90,7 @@
             </section>
         </main>
     </div>
+
+    <script src="/administrador/script.js"></script>
 </body>
 </html>
