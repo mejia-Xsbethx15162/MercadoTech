@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Inventario</title>
+    <link rel="stylesheet" href="/administrador/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Panel de Administrador</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#inventario">Ver Inventario</a></li>
+                <li><a href="#agregar">Agregar Producto</a></li>
+                <li><a href="#usuarios">Gestionar Usuarios</a></li>
+            </ul>
+        </nav>
+
+     
+        <main>
+        
+            <section id="inventario">
+                <h2>Inventario</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     
+                        <tr>
+                            <td>1</td>
+                            <td>Producto A</td>
+                            <td>50</td>
+                            <td>$20</td>
+                            <td><button>Editar</button><button>Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Producto B</td>
+                            <td>30</td>
+                            <td>$15</td>
+                            <td><button>Editar</button><button>Eliminar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+    
+            <section id="agregar">
+                <h2>Agregar Producto</h2>
+                <form action="#">
+                    <label for="nombre">Nombre del Producto:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" required>
+
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" name="precio" required>
+
+                    <button type="submit">Agregar</button>
+                </form>
+            </section>
+
+
+            <section id="usuarios">
+                <h2>Gestionar Usuarios</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Juan Pérez</td>
+                            <td>Administrador</td>
+                            <td><button>Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ana López</td>
+                            <td>Usuario</td>
+                            <td><button>Eliminar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
