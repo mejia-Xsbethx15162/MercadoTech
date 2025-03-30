@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Jabón en Polvo", precio: "$3.99", img: "/img/jabon.png" },
         { nombre: "Limpiador Multiusos", precio: "$2.99", img: "/img/multiusos.png" },
         { nombre: "Desinfectante", precio: "$6.50", img: "/img/desinfectante.png" },
+        { nombre: "Lavatrastes", precio: "$2.99", img: "/img/lavatrastes.png" },
+        { nombre: "Aromatizante", precio: "$3.50", img: "/img/aromatizante.png" },
+        { nombre: "Cloro", precio: "$1.99", img: "/img/cloro.png" },
+        { nombre: "Esponjas", precio: "$2.49", img: "/img/esponjas.png" },
+        { nombre: "Trapeador", precio: "$7.99", img: "/img/trapeador.png" },
+        { nombre: "Escoba", precio: "$8.99", img: "/img/escoba.png" },
+        { nombre: "Jabón de manos", precio: "$1.99", img: "/img/jabon_manos.png" },
+        { nombre: "Shampoo", precio: "$5.99", img: "/img/shampoo.png" },
+        { nombre: "Papel Higiénico", precio: "$6.99", img: "/img/papel.png" },
+        { nombre: "Toallitas Desinfectantes", precio: "$4.99", img: "/img/toallitas.png" },
     ];
 
     const contenedor = document.querySelector(".productos-container");
@@ -12,12 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
     productos.forEach(producto => {
         const div = document.createElement("div");
         div.classList.add("aseo");
-        div.innerHTML = `
-            <img src="${producto.img}" alt="${producto.nombre}">
-            <div class="nombre">${producto.nombre}</div> 
-            <div class="precio">${producto.precio}</div>
-            <button class="agregar-carrito">Añadir al carrito</button>
-        `;
+        div.innerHTML = `<img src="${producto.img}" alt="${producto.nombre}">
+                         <div class="nombre">${producto.nombre}</div> 
+                         <div class="precio">${producto.precio}</div>
+                         <button class="agregar-carrito">Añadir al carrito</button>`;
         contenedor.appendChild(div);
     });
 });
+
+
