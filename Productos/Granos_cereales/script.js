@@ -9,7 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Quinua", precio: "$5.00/kg", img: "/img/quinua.png" },
         { nombre: "Cebada", precio: "$2.30/kg", img: "/img/cebada.png" },
         { nombre: "Chía", precio: "$6.50/kg", img: "/img/chia.png" },
-        { nombre: "Centeno", precio: "$2.80/kg", img: "/img/centeno.png" }
+        { nombre: "Centeno", precio: "$2.80/kg", img: "/img/centeno.png" },
+        { nombre: "Trigo", precio: "$1.75/kg", img: "/img/trigo.png" },
+        { nombre: "Soja", precio: "$2.60/kg", img: "/img/soja.png" },
+        { nombre: "Sorgo", precio: "$3.10/kg", img: "/img/sorgo.png" },
+        { nombre: "Alpiste", precio: "$4.00/kg", img: "/img/alpiste.png" },
+        { nombre: "Mijo", precio: "$3.50/kg", img: "/img/mijo.png" }
     ];
 
     const contenedor = document.querySelector(".productos-container");
@@ -24,3 +29,4 @@ document.addEventListener("DOMContentLoaded", function() {
         contenedor.appendChild(div);
     });
 });
+

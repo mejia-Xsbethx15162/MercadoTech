@@ -13,7 +13,18 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Cebollas", precio: "$2.00/kg", img: "/img/cebolla.png" },
         { nombre: "Pimientos", precio: "$2.50/kg", img: "/img/pimiento.png" },
         { nombre: "Brócoli", precio: "$3.20/kg", img: "/img/brocoli.png" },
-        { nombre: "Espinacas", precio: "$1.99/paquete", img: "/img/espinaca.png" }
+        { nombre: "Espinacas", precio: "$1.99/paquete", img: "/img/espinaca.png" },
+        { nombre: "Uvas", precio: "$3.80/kg", img: "/img/uvas.png" },
+        { nombre: "Piñas", precio: "$2.90/unidad", img: "/img/pina.png" },
+        { nombre: "Sandía", precio: "$5.00/unidad", img: "/img/sandia.png" },
+        { nombre: "Papaya", precio: "$4.50/kg", img: "/img/papaya.png" },
+        { nombre: "Melón", precio: "$3.60/kg", img: "/img/melon.png" },
+        { nombre: "Aguacate", precio: "$4.20/kg", img: "/img/aguacate.png" },
+        { nombre: "Coliflor", precio: "$2.99/unidad", img: "/img/coliflor.png" },
+        { nombre: "Berenjena", precio: "$3.40/kg", img: "/img/berenjena.png" },
+        { nombre: "Calabacín", precio: "$2.30/kg", img: "/img/calabacin.png" },
+        { nombre: "Remolacha", precio: "$2.10/kg", img: "/img/remolacha.png" },
+        { nombre: "Rábanos", precio: "$1.70/paquete", img: "/img/rabanos.png" }
     ];
 
     const contenedor = document.querySelector(".productos-container");
