@@ -1,4 +1,4 @@
-/* ===== RESETEO GENERAL ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +7,13 @@
     text-decoration: none;
 }
 
-/* ===== ESTILO DEL BODY ===== */
+
 body {
     background-color: #f5f5f5;
     padding-top: 80px;
 }
 
-/* ===== BARRA DE NAVEGACIÓN ===== */
+
 header {
     width: 100%;
     background-color: #6a0dad;
@@ -43,7 +43,7 @@ header {
     transform: scale(1.1);
 }
 
-/* ===== MENÚ DE NAVEGACIÓN ===== */
+
 .navegacion ul {
     display: flex;
     list-style: none;
@@ -67,7 +67,6 @@ header {
     color: #fbc02d;
 }
 
-/* SUBMENÚ */
 .submenu .hijos {
     display: none;
     position: absolute;
@@ -94,18 +93,18 @@ header {
     background: #444;
 }
 
-/* ===== SECCIÓN DE PRODUCTOS ===== */
+
 .productos-container {
     margin: 100px auto 30px;
     width: 90%;
     max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     padding: 20px;
 }
 
-/* Estilos de cada producto */
+
 .aseo {
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -158,22 +157,22 @@ header {
     transform: scale(1.1);
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 1024px) {
     .productos-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 productos por fila en tablets */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
 
 @media (max-width: 768px) {
     .productos-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila en móviles medianos */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 480px) {
     .productos-container {
-        grid-template-columns: repeat(1, 1fr); /* 1 producto por fila en móviles pequeños */
+        grid-template-columns: repeat(1, 1fr); 
     }
 }
 
