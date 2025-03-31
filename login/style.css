@@ -4,6 +4,81 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+header {
+    width: 100%;
+    background-color: #6a0dad;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.fondo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.navegacion ul {
+    display: flex;
+    list-style: none;
+}
+
+.navegacion ul li {
+    margin-left: 15px;
+    position: relative;
+}
+
+.navegacion ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+
+.navegacion ul li a:hover {
+    color: #fbc02d;
+}
+
+.submenu .hijos {
+    display: none;
+    position: absolute;
+    background: #333;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.submenu:hover .hijos {
+    display: block;
+}
+
+.hijos li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.hijos li a:hover {
+    background: #444;
+}
 
 body {
     background-color: black;
