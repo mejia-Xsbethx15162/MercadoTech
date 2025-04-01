@@ -64,35 +64,16 @@ h2 {
     margin-bottom: 15px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-table th, table td {
+ul li {
     padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-table th {
-    background-color: #2980b9;
-    color: white;
-}
-
-button {
-    background-color: #2980b9;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
+    background-color: #ecf0f1;
+    margin-bottom: 8px;
     border-radius: 4px;
-    margin: 0 5px;
-}
-
-button:hover {
-    background-color: #34495e;
 }
 
 form {
@@ -116,16 +97,4 @@ form button {
 
 form button:hover {
     background-color: #27ae60;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-ul li {
-    padding: 10px;
-    background-color: #ecf0f1;
-    margin-bottom: 8px;
-    border-radius: 4px;
 }

@@ -11,20 +11,15 @@
         <header>
             <h1>Panel de Administrador</h1>
         </header>
-        
-    
+
         <nav>
             <ul>
                 <li><a href="#inventario">Ver Inventario</a></li>
-                <li><a href="#agregar">Agregar Producto</a></li>
-                <li><a href="#usuarios">Gestionar Usuarios</a></li>
-                <li><a href="/Productos/aseo_hogar/index.html">Ver Productos de Aseo</a></li>
+                <li><a href="#productos-faltantes">Productos Faltantes</a></li>
             </ul>
         </nav>
 
- 
         <main>
-            
             <section id="inventario">
                 <h2>Inventario</h2>
                 <table>
@@ -38,55 +33,26 @@
                         </tr>
                     </thead>
                     <tbody id="tabla-inventario">
-                       
+                        
                     </tbody>
                 </table>
             </section>
 
-          
-            <section id="agregar">
-                <h2>Agregar Producto</h2>
-                <form id="formulario-producto">
-                    <label for="nombre">Nombre del Producto:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+            <section id="productos-faltantes">
+                <h2>Productos Faltantes</h2>
+                <form id="formulario-enviar">
+                    <label for="producto">Producto:</label>
+                    <input type="text" id="producto" name="producto" required>
 
-                    <label for="cantidad">Cantidad:</label>
-                    <input type="number" id="cantidad" name="cantidad" required>
+                    <label for="cantidad-faltante">Cantidad Faltante:</label>
+                    <input type="number" id="cantidad-faltante" name="cantidad-faltante" required>
 
-                    <label for="precio">Precio:</label>
-                    <input type="number" id="precio" name="precio" required>
-
-                    <button type="submit">Agregar</button>
+                    <button type="submit">Enviar a Proveedor</button>
                 </form>
-            </section>
-
-          
-            <section id="usuarios">
-                <h2>Gestionar Usuarios</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Rol</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Juan Pérez</td>
-                            <td>Administrador</td>
-                            <td><button>Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Ana López</td>
-                            <td>Usuario</td>
-                            <td><button>Eliminar</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h3>Lista de Productos Faltantes</h3>
+                <ul id="lista-productos-faltantes">
+                   
+                </ul>
             </section>
         </main>
     </div>
@@ -94,3 +60,4 @@
     <script src="/administrador/script.js"></script>
 </body>
 </html>
+

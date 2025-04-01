@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const tabla = document.getElementById("tabla-inventario");
+    const listaProductosFaltantes = document.getElementById("lista-productos-faltantes");
 
     productos.forEach(producto => {
         const fila = document.createElement("tr");
@@ -16,18 +17,39 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>${producto.cantidad}</td>
             <td>$${producto.precio.toFixed(2)}</td>
             <td>
-                <button onclick="editarProducto(${producto.id})">Editar</button>
-                <button onclick="eliminarProducto(${producto.id})">Eliminar</button>
+                <button onclick="agregarProductoFaltante(${producto.id})">Marcar como Faltante</button>
             </td>
         `;
         tabla.appendChild(fila);
     });
+
+    
+    window.agregarProductoFaltante = function(id) {
+        const producto = productos.find(p => p.id === id);
+        if (!producto) return;
+
+      
+        let productosFaltantes = JSON.parse(localStorage.getItem("productosFaltantes")) || [];
+        productosFaltantes.push({ id: producto.id, nombre: producto.nombre, cantidad: producto.cantidad });
+        localStorage.setItem("productosFaltantes", JSON.stringify(productosFaltantes));
+
+        alert(`Producto "${producto.nombre}" marcado como faltante.`);
+
+        actualizarListaFaltantes();
+    };
+
+
+    function actualizarListaFaltantes() {
+        const productosFaltantes = JSON.parse(localStorage.getItem("productosFaltantes")) || [];
+        listaProductosFaltantes.innerHTML = ""; 
+
+        productosFaltantes.forEach(producto => {
+            const li = document.createElement("li");
+            li.textContent = `${producto.nombre} - Cantidad faltante: ${producto.cantidad}`;
+            listaProductosFaltantes.appendChild(li);
+        });
+    }
+
+    actualizarListaFaltantes();
 });
 
-function editarProducto(id) {
-    alert("Editar producto con ID: " + id);
-}
-
-function eliminarProducto(id) {
-    alert("Eliminar producto con ID: " + id);
-}
