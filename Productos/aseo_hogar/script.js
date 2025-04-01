@@ -25,7 +25,24 @@ document.addEventListener("DOMContentLoaded", function() {
         div.innerHTML = `<img src="${producto.img}" alt="${producto.nombre}">
                          <div class="nombre">${producto.nombre}</div> 
                          <div class="precio">${producto.precio}</div>
-                         <button class="agregar-carrito">Añadir al carrito</button>`;
+                         <button class="agregar-carrito">Añadir al carrito</button>`
+        ;
+        
+        // Agregar evento al botón de "Añadir al carrito"
+        const botonCarrito = div.querySelector(".agregar-carrito");
+        botonCarrito.addEventListener("click", function() {
+            // Obtener el carrito actual desde localStorage
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+            // Añadir el producto al carrito
+            carrito.push({ nombre: producto.nombre, precio: producto.precio });
+
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            // Mostrar una alerta o mensaje (opcional)
+            alert(`${producto.nombre} añadido al carrito`);
+        });            
         contenedor.appendChild(div);
     });
 });

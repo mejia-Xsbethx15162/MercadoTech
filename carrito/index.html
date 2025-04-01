@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aseo Hogar</title>
-    <link rel="stylesheet" href="/Productos/aseo_hogar/style.css">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="/carrito/style.css">
 </head>
 <body>
     <header>
@@ -35,20 +35,24 @@
                     </li>
                     <li><a href="#">Descuentos</a></li>
                     <li><a href="/login/index.html">Login</a></li>
-                    <li><a href="/carrito/index.html">Carrito</a></li> 
+                    <li><a href="/carrito.html">Carrito</a></li> 
                 </ul>
             </nav>
         </div>
     </header>
+
+    
+ 
+    
+    <h1>Carrito de Compras</h1>
+    <ul id="carrito"></ul> 
+    <div id="total"></div>  
+
+    <a href="/Productos/aseo_hogar/index.html" class="boton-seguir-comprando">Seguir comprando</a>
+    <button class="boton-finalizar-compra" onclick="finalizarCompra()">Finalizar compra</button>
+    <script src="/carrito/script.js"></script>  
+   
     
 
-    <main>
-        <div class="productos-container">
-            
-        </div>
-    </main>
-
-    <script src="/Productos/aseo_hogar/script.js"></script>
 </body>
 </html>
-
