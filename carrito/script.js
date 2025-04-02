@@ -1,15 +1,22 @@
 function agregarAlCarrito(producto) {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    carrito.push(producto); 
-    localStorage.setItem("carrito", JSON.stringify(carrito));  
-    actualizarCarrito();  
-}
+    
+    const precioProducto = parseFloat(producto.precio);
+    if (isNaN(precioProducto)) {
+        console.error(`Precio no válido para el producto: ${producto.nombre}`);
+        return; // Si el precio no es válido, no lo agregamos
+    }
+    
+    const productoExistente = carrito.find(item => item.nombre === producto.nombre);
+    
+    if (productoExistente) {
+        productoExistente.cantidad += 1;
+    } else {
+        carrito.push({ nombre: producto.nombre, precio: precioProducto, cantidad: 1 });
+    }
 
-function eliminarDelCarrito(index) {
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    carrito.splice(index, 1);  
-    localStorage.setItem("carrito", JSON.stringify(carrito));  
-    actualizarCarrito(); 
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarCarrito();
 }
 
 function actualizarCarrito() {
@@ -17,16 +24,21 @@ function actualizarCarrito() {
     const totalElemento = document.getElementById("total");
 
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
     listaCarrito.innerHTML = "";  
 
     let total = 0;
 
     carrito.forEach((producto, index) => {
-        total += producto.precio * producto.cantidad;  
+        const precioProducto = parseFloat(producto.precio);
+        if (isNaN(precioProducto)) {
+            console.error(`Precio no válido para el producto: ${producto.nombre}`);
+            return;
+        }
+
+        total += precioProducto * producto.cantidad;
 
         const item = document.createElement("li");
-        item.textContent = `${producto.nombre} - $${(producto.precio * producto.cantidad).toFixed(2)} (x${producto.cantidad})`;
+        item.textContent = `${producto.nombre} - $${(precioProducto * producto.cantidad).toFixed(2)} (x${producto.cantidad})`;
 
         const botonEliminar = document.createElement("button");
         botonEliminar.textContent = "Eliminar";
@@ -39,20 +51,13 @@ function actualizarCarrito() {
     totalElemento.textContent = `Total: $${total.toFixed(2)}`;
 }
 
-function finalizarCompra() {
+function eliminarDelCarrito(index) {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-    if (carrito.length > 0) {
-        alert("¡Gracias por tu compra! Procediendo a la confirmación.");
-        
-        localStorage.removeItem("carrito");  
-        actualizarCarrito();  
-    } else {
-        alert("Tu carrito está vacío. Agrega productos antes de finalizar la compra.");
-    }
+    carrito.splice(index, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    actualizarCarrito();
 }
 
 document.addEventListener("DOMContentLoaded", actualizarCarrito);
-
 
 

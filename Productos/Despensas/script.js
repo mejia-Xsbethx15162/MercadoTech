@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productos = [
-        { nombre: "Arroz Blanco", precio: "$2.50", img: "/img/arroz.png" },
-        { nombre: "Frijoles Negros", precio: "$3.00", img: "/img/frijoles.png" },
-        { nombre: "Aceite Vegetal", precio: "$4.99", img: "/img/aceite.png" },
-        { nombre: "Azúcar Blanca", precio: "$2.75", img: "/img/azucar.png" },
-        { nombre: "Harina de Trigo", precio: "$1.99", img: "/img/harina.png" },
-        { nombre: "Sal de Mesa", precio: "$1.20", img: "/img/sal.png" },
-        { nombre: "Pasta Espagueti", precio: "$2.25", img: "/img/pasta.png" },
-        { nombre: "Lentejas", precio: "$2.80", img: "/img/lentejas.png" },
-        { nombre: "Cereal de Maíz", precio: "$3.50", img: "/img/cereal.png" },
-        { nombre: "Café Molido", precio: "$5.99", img: "/img/cafe.png" }
+        { nombre: "Arroz Blanco", precio: 2.50, img: "/img/arroz.png" },
+        { nombre: "Frijoles Negros", precio: 3.00, img: "/img/frijoles.png" },
+        { nombre: "Aceite Vegetal", precio: 4.99, img: "/img/aceite.png" },
+        { nombre: "Azúcar Blanca", precio: 2.75, img: "/img/azucar.png" },
+        { nombre: "Harina de Trigo", precio: 1.99, img: "/img/harina.png" },
+        { nombre: "Sal de Mesa", precio: 1.20, img: "/img/sal.png" },
+        { nombre: "Pasta Espagueti", precio: 2.25, img: "/img/pasta.png" },
+        { nombre: "Lentejas", precio: 2.80, img: "/img/lentejas.png" },
+        { nombre: "Cereal de Maíz", precio: 3.50, img: "/img/cereal.png" },
+        { nombre: "Café Molido", precio: 5.99, img: "/img/cafe.png" }
     ];
 
     const contenedor = document.querySelector(".productos-container");
@@ -17,26 +17,37 @@ document.addEventListener("DOMContentLoaded", function() {
     productos.forEach(producto => {
         const div = document.createElement("div");
         div.classList.add("despensa");
-        div.innerHTML = `<img src="${producto.img}" alt="${producto.nombre}">
-                         <div class="nombre">${producto.nombre}</div> 
-                         <div class="precio">${producto.precio}</div>
-                         <button class="agregar-carrito">Añadir al carrito</button>`;
-        contenedor.appendChild(div)
-        ;
+        div.innerHTML = `
+            <img src="${producto.img}" alt="${producto.nombre}">
+            <div class="nombre">${producto.nombre}</div> 
+            <div class="precio">$${producto.precio.toFixed(2)}</div>
+            <button class="agregar-carrito">Añadir al carrito</button>
+        `;
 
         const botonCarrito = div.querySelector(".agregar-carrito");
         botonCarrito.addEventListener("click", function() {
+            console.log("Producto seleccionado:", producto.nombre);
             
             let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-            
-            carrito.push({ nombre: producto.nombre, precio: producto.precio });
+            const productoExistente = carrito.find(item => item.nombre === producto.nombre);
 
-            
+            console.log("Producto ya en carrito:", productoExistente);
+
+            if (productoExistente) {
+                productoExistente.cantidad += 1;
+            } else {
+                carrito.push({ nombre: producto.nombre, precio: producto.precio, cantidad: 1 });
+            }
+
             localStorage.setItem("carrito", JSON.stringify(carrito));
 
-            
+            console.log("Carrito actualizado:", carrito);
+
             alert(`${producto.nombre} añadido al carrito`);
-        });      
+        });
+
+        contenedor.appendChild(div);
     });
 });
+
