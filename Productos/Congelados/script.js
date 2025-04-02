@@ -21,6 +21,22 @@ document.addEventListener("DOMContentLoaded", function() {
                          <div class="nombre">${producto.nombre}</div> 
                          <div class="precio">${producto.precio}</div>
                          <button class="agregar-carrito">Añadir al carrito</button>`;
-        contenedor.appendChild(div);
+        contenedor.appendChild(div)
+        ;
+        
+        const botonCarrito = div.querySelector(".agregar-carrito");
+        botonCarrito.addEventListener("click", function() {
+            
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+            
+            carrito.push({ nombre: producto.nombre, precio: producto.precio });
+
+            
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            
+            alert(`${producto.nombre} añadido al carrito`);
+        });      
     });
 });
