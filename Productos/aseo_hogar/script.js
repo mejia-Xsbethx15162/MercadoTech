@@ -15,9 +15,9 @@ function inicializarTienda() {
 function obtenerProductos() {
     
     return [
-        { nombre: "Jabón en Polvo", precio: 3.99, img: "/img/jabon.png" },
-        { nombre: "Detergente Líquido", precio: 5.99, img: "/img/detergente.png" },
-        { nombre: "Papel Higiénico", precio: 6.99, img: "/img/papel.png" },
+        { nombre: "Jabón en Polvo", precio: 3.99, img: "/img/" },
+        { nombre: "Detergente Líquido", precio: 5.99, img: "/img/" },
+        { nombre: "Papel Higiénico", precio: 6.99, img: "/img/" },
         { nombre: "Desinfectante", precio: 6.50, img: "/img/desinfectante.png" },
         { nombre: "Suavizante de Ropa", precio: 4.50, img: "/img/suavizante.png" },
         { nombre: "Escoba", precio: 8.99, img: "/img/escoba.png" },

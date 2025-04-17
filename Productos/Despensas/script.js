@@ -1,5 +1,19 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const productos = [
+window.onload = inicializarTienda;
+
+function inicializarTienda() {
+    const productos = obtenerProductos();
+    const contenedor = document.querySelector(".productos-container");
+    
+    if (!contenedor) {
+        console.error("No se encontró el contenedor de productos");
+        return;
+    }
+    
+    mostrarProductos(productos, contenedor);
+}
+
+function obtenerProductos() {
+    return [
         { nombre: "Arroz Blanco", precio: 2.50, img: "/img/arroz.png" },
         { nombre: "Frijoles Negros", precio: 3.00, img: "/img/frijoles.png" },
         { nombre: "Aceite Vegetal", precio: 4.99, img: "/img/aceite.png" },
@@ -11,43 +25,88 @@ document.addEventListener("DOMContentLoaded", function() {
         { nombre: "Cereal de Maíz", precio: 3.50, img: "/img/cereal.png" },
         { nombre: "Café Molido", precio: 5.99, img: "/img/cafe.png" }
     ];
+}
 
-    const contenedor = document.querySelector(".productos-container");
-
-    productos.forEach(producto => {
-        const div = document.createElement("div");
-        div.classList.add("despensa");
-        div.innerHTML = `
-            <img src="${producto.img}" alt="${producto.nombre}">
-            <div class="nombre">${producto.nombre}</div> 
-            <div class="precio">$${producto.precio.toFixed(2)}</div>
-            <button class="agregar-carrito">Añadir al carrito</button>
-        `;
-
-        const botonCarrito = div.querySelector(".agregar-carrito");
-        botonCarrito.addEventListener("click", function() {
-            console.log("Producto seleccionado:", producto.nombre);
-            
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-            const productoExistente = carrito.find(item => item.nombre === producto.nombre);
-
-            console.log("Producto ya en carrito:", productoExistente);
-
-            if (productoExistente) {
-                productoExistente.cantidad += 1;
-            } else {
-                carrito.push({ nombre: producto.nombre, precio: producto.precio, cantidad: 1 });
-            }
-
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-
-            console.log("Carrito actualizado:", carrito);
-
-            alert(`${producto.nombre} añadido al carrito`);
-        });
-
-        contenedor.appendChild(div);
+function mostrarProductos(prods, donde) {
+    donde.innerHTML = '';
+    
+    prods.forEach(producto => {
+        donde.appendChild(crearElementoProducto(producto));
     });
-});
+}
 
+function crearElementoProducto(prod) {
+    const elem = document.createElement('div');
+    elem.className = 'despensa';
+    
+    const img = document.createElement('img');
+    img.src = prod.img;
+    img.alt = prod.nombre;
+    
+    const divNombre = document.createElement('div');
+    divNombre.className = 'nombre';
+    divNombre.textContent = prod.nombre;
+    
+    const divPrecio = document.createElement('div');
+    divPrecio.className = 'precio';
+    divPrecio.textContent = '$' + prod.precio.toFixed(2);
+    
+    const boton = document.createElement('button');
+    boton.className = 'agregar-carrito';
+    boton.textContent = 'Añadir al carrito';
+    
+    boton.addEventListener('click', function() {
+        agregarAlCarrito(prod);
+    });
+    
+    elem.appendChild(img);
+    elem.appendChild(divNombre);
+    elem.appendChild(divPrecio);
+    elem.appendChild(boton);
+    
+    return elem;
+}
+
+function agregarAlCarrito(producto) {
+    let carrito = leerCarrito();
+    
+    let encontrado = false;
+    
+    for (let i = 0; i < carrito.length; i++) {
+        if (carrito[i].nombre === producto.nombre) {
+            carrito[i].cantidad += 1;
+            encontrado = true;
+            break;
+        }
+    }
+    
+    if (!encontrado) {
+        carrito.push({
+            nombre: producto.nombre,
+            precio: producto.precio,
+            cantidad: 1
+        });
+    }
+    
+    guardarCarrito(carrito);
+    
+    alert(producto.nombre + " añadido al carrito");
+}
+
+function leerCarrito() {
+    try {
+        const datos = localStorage.getItem('carrito');
+        return datos ? JSON.parse(datos) : [];
+    } catch (error) {
+        console.warn('Error al leer el carrito:', error);
+        return [];
+    }
+}
+
+function guardarCarrito(carrito) {
+    try {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    } catch (error) {
+        console.error('No se pudo guardar en localStorage:', error);
+    }
+}
