@@ -1,0 +1,299 @@
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>MercadoTech</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <div class="flex min-h-screen">
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Categorías</h2>
+            <nav class="sidebar-nav">
+                <a href="/Productos/Aseo_Hogar/Index.html">Aseo del hogar</a>
+                <a href="/Productos/Lacteos/Index.html">Lácteos</a>
+                <a href="/Productos/Carnicos/Index.html">Cárnicos</a>
+                <a href="/Productos/Frutas_Verduras/Index.html">Frutas y verduras</a>
+                <a href="/Productos/Granos_Cereales/Index.html">Granos y cereales</a>
+                <a href="/Productos/Bebidas/Index.html">Bebidas</a>
+                <a href="/Productos/Congelados/Index.html">Congelados</a>
+                <a href="/Productos/Dulces_Chocolates/Index.html">Dulces y chocolates</a>
+                <a href="/Productos/Despensas/Index.html">Despensas</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="full-width-header">
+                <h1>MercadoTech</h1>
+                <div class="header-controls">
+                    <div class="search-container">
+                        <input
+                            class="search-input"
+                            placeholder="Buscar productos..."
+                            type="text"
+                        />
+                        <button aria-label="Buscar" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <nav class="header-nav">
+                        <a href="/Acerca/Index.html">Acerca de</a>
+                        <a href="/Administrador/Index.html">Inventario</a>
+                        <a href="/Carrito/Index.html">Carrto</a>
+                    </nav>
+                    <button aria-label="User menu" class="user-button">M</button>
+                </div>
+            </header>
+            <section
+                class="carousel-section"
+                aria-label="Carrusel de ofertas"
+            >
+                <button
+                    id="prevBtn"
+                    aria-label="Oferta anterior"
+                    class="carousel-btn carousel-btn-left"
+                >
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button
+                    id="nextBtn"
+                    aria-label="Oferta siguiente"
+                    class="carousel-btn carousel-btn-right"
+                >
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div id="carousel" class="carousel-track">
+                    <div class="carousel-item">
+                        <div class="offer-title">Oferta Hero 1</div>
+                        <img
+                            alt="Paquete de arroz oferta"
+                            class="offer-image"
+                            height="60"
+                            src="https://storage.googleapis.com/a1aa/image/65e5a124-fa01-4524-2018-e0852f249697.jpg"
+                            width="60"
+                        />
+                        <div class="offer-prices">
+                            <span class="price-current">$20.00</span>
+                            <span class="price-old">$29.50</span>
+                            <span class="price-discount">33%</span>
+                        </div>
+                        <div class="offer-detail">Ver detalle</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="offer-title">Oferta Hero 2</div>
+                        <img
+                            alt="Botella de jugo oferta"
+                            class="offer-image"
+                            height="60"
+                            src="https://storage.googleapis.com/a1aa/image/88297030-ad12-4cd2-d682-d2d07cef3a1b.jpg"
+                            width="60"
+                        />
+                        <div class="offer-prices">
+                            <span class="price-current">$16.00</span>
+                            <span class="price-old">$25.60</span>
+                            <span class="price-discount">40%</span>
+                        </div>
+                        <div class="offer-detail">Ver detalle</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="offer-title">Oferta Hero 3</div>
+                        <img
+                            alt="Paquete de galletas oferta"
+                            class="offer-image"
+                            height="60"
+                            src="https://storage.googleapis.com/a1aa/image/cc812cc5-c4d9-47ec-b44a-b0d2d8e444b4.jpg"
+                            width="60"
+                        />
+                        <div class="offer-prices">
+                            <span class="price-current">$22.00</span>
+                            <span class="price-old">$32.00</span>
+                            <span class="price-discount">31%</span>
+                        </div>
+                        <div class="offer-detail">Ver detalle</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="offer-title">Oferta Hero 4</div>
+                        <img
+                            alt="Paquete de carne oferta"
+                            class="offer-image"
+                            height="60"
+                            src="https://storage.googleapis.com/a1aa/image/38dc2438-8988-4e5d-2163-92e2fe250969.jpg"
+                            width="60"
+                        />
+                        <div class="offer-prices">
+                            <span class="price-current">$10.00</span>
+                            <span class="price-old">$18.00</span>
+                            <span class="price-discount">44%</span>
+                        </div>
+                        <div class="offer-detail">Ver detalle</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="offer-title">Oferta Hero 5</div>
+                        <img
+                            alt="Paquete de chocolate oferta"
+                            class="offer-image"
+                            height="60"
+                            src="https://storage.googleapis.com/a1aa/image/2f42deaf-58eb-433d-d137-71170ea77179.jpg"
+                            width="60"
+                        />
+                        <div class="offer-prices">
+                            <span class="price-current">$75.00</span>
+                            <span class="price-old">$100.00</span>
+                            <span class="price-discount">25%</span>
+                        </div>
+                        <div class="offer-detail">Ver detalle</div>
+                    </div>
+                </div>
+            </section>
+            <h2 class="products-title">Productos Destacados</h2>
+            <section class="products-grid">
+                <article class="product-card">
+                    <img
+                        alt="Botella de agua mineral"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/b67e64f6-7b80-4ad5-8f28-28192ae917b9.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Agua Mineral</strong>
+                    <span class="product-price">$19.99</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Paquete de arroz"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/65e5a124-fa01-4524-2018-e0852f249697.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Arroz</strong>
+                    <span class="product-price">$29.50</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Queso en bloque"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/4a7f3f3a-1a2b-4f3e-9f3a-1a2b3c4d5e6f.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Queso</strong>
+                    <span class="product-price">$9.75</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Paquete de carne"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/38dc2438-8988-4e5d-2163-92e2fe250969.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Carne</strong>
+                    <span class="product-price">$49.99</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Paquete de galletas"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/cc812cc5-c4d9-47ec-b44a-b0d2d8e444b4.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Galletas</strong>
+                    <span class="product-price">$12.50</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Botella de jugo"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/88297030-ad12-4cd2-d682-d2d07cef3a1b.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Jugo</strong>
+                    <span class="product-price">$35.00</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Paquete de frijoles"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/94e4d2db-f71c-4731-efa7-8546b3cdd827.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Frijoles</strong>
+                    <span class="product-price">$5.99</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Paquete de chocolate"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/2f42deaf-58eb-433d-d137-71170ea77179.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Chocolate</strong>
+                    <span class="product-price">$55.75</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Paquete de café"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/6fea177c-8775-4726-f999-b7941276b670.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Café</strong>
+                    <span class="product-price">$18.00</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Paquete de azúcar"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/0ccb4f29-f5de-4787-1698-7cfc40025cbe.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Azúcar</strong>
+                    <span class="product-price">$22.50</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Cartón de leche"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/28c763f4-d916-4a1e-b275-f45b6923a40c.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Leche</strong>
+                    <span class="product-price">$15.00</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+                <article class="product-card">
+                    <img
+                        alt="Bolsa de pan"
+                        class="product-image"
+                        height="120"
+                        src="https://storage.googleapis.com/a1aa/image/091c7a8d-c4ff-406c-913e-451a8a994ba8.jpg"
+                        width="80"
+                    />
+                    <strong class="product-name">Pan</strong>
+                    <span class="product-price">$8.75</span>
+                    <button class="product-button">Ver detalle</button>
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="/Nave_Inicio/Script.js"></script>
+</body>
+</html>
