@@ -4,6 +4,7 @@ Objetivo del backlog: Crear y distribuir las tareas del forntend en un tiempo es
 
 Requerimientos de la aplicacion:
 RF:001	El sistema deberá permitir al los Usuarios tener acceso a  la información de nuevos productos en inventario, incluyendo nombre, descripción, categoría, precio y cantidad inicial.							
+
 RF:002	El sistema deberá permitir a los Administradores, Empleados y Clientes ser notificados al momento de que la aplicación actualice automáticamente el inventario cuando se realiza una venta o una adición de productos.							
 RF:003	El sistema deberá permitir a los Empleados, Administradores y Proveedores tener acceso a una lista completa de todos los productos en inventario, incluyendo detalles como cantidad disponible y precio.							
 RF:004	El sistema deberá permitir a los Administradores y Clientes registrar información de proveedores y enlazar productos a proveedores específicos.							
